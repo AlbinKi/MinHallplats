@@ -11,6 +11,7 @@
 body {
   margin: 0 auto;
   overflow: hidden;
+  position: relative;
 }
 .home{
   width: 100vw;
