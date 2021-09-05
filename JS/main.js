@@ -16,12 +16,12 @@ window.onscroll = function() {
   document.getElementById("btn-home").style.opacity = Math.lerp(0, 100, percentage) + "%";
 
     if(isDeparture){
-      document.getElementById("departure-search").style.bottom = Math.lerp(55, 2.5, percentage) + "%";
+      document.getElementById("departure-search").style.bottom = Math.lerp(50, 2.5, percentage) + "%";
       document.getElementById("departure-search").style.left = Math.lerp(15, 5, percentage) + "%";
 
     }
     else{
-      document.getElementById("route-search").style.bottom = Math.lerp(40, 2.5, percentage) + "%";
+      document.getElementById("route-search").style.bottom = Math.lerp(30, 2.5, percentage) + "%";
       document.getElementById("route-search").style.left = Math.lerp(15, 5, percentage) + "%";
 
     }
@@ -125,7 +125,9 @@ function addAutoComplete(inp){
             
           }
           if(inp.id == "route") {
-            document.getElementById("tables").textContent = '';                
+            document.getElementById("tables").textContent = '';     
+            isDeparture = false;
+           
 
             var inputs = this.getElementsByTagName("input");
             inp.value = this.getElementsByTagName("input")[0].value;
@@ -142,9 +144,7 @@ function addAutoComplete(inp){
               var apiURL = "https://api.resrobot.se/v2/location.name?key=10960676-4c10-424b-ab0e-b68900228229&input=" + inputs[0].value + "&format=json";
               var response = await fetch(apiURL);
               var data = await response.json();
-              // apiURL = "https://api.resrobot.se/v2/trip?key=10960676-4c10-424b-ab0e-b68900228229&originCoordLat=" + pos.coords.latitude + "&originCoordLong=" + pos.coords.longitude +"&destId="+ inputs[1].value + "&format=json";
-              apiURL = "https://api.resrobot.se/v2/trip?key=10960676-4c10-424b-ab0e-b68900228229&originCoordLat=59.728894&originCoordLong=17.787294&destId="+ inputs[1].value + "&format=json";
-
+              apiURL = "https://api.resrobot.se/v2/trip?key=10960676-4c10-424b-ab0e-b68900228229&originCoordLat=" + pos.coords.latitude + "&originCoordLong=" + pos.coords.longitude +"&destId="+ inputs[1].value + "&format=json";
               response = await fetch(apiURL);
               data = await response.json();
              

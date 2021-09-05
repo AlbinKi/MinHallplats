@@ -18,11 +18,11 @@ body {
   background: radial-gradient(circle, rgba(68,53,91,1) 0%, rgba(49,38,62,1) 100%);
 }
 #header{
-font-size: 5rem;
+font-size: 5em;
 color: #FFBC42;
 position: absolute;
 font-weight: 800;
-top: 5%;
+top: 1vh;
 left: 12.5%;
 font-family: esseltub;
 }
@@ -39,19 +39,20 @@ font-family: esseltub;
   position: absolute;
 }
 #departure-search{
-  bottom: 55%;
+  bottom: 50%;
 }
 #decor{
   position: absolute;
-  bottom: 41%;
-  font-size: 3rem;
+  bottom: 40%;
+  margin: 0 auto;
+  font-size: 3em;
   left: 40%;
   color: #FFBC42;
   font-family: esseltub;
 
 }
 #route-search{
-  bottom: 40%;
+  bottom: 30%;
 }
 ::placeholder {
   color: gray;
@@ -108,7 +109,7 @@ input[type=text] {
   background-color: #FFBC42;
   border-radius: 15px;
   position: absolute;
-  padding: 2% 5%;
+  padding: 1vh 2vw;
   bottom: 2.5%;
   right: 3%;
   color: rgba(49,38,62,1);
