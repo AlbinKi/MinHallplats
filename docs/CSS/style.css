@@ -11,12 +11,12 @@
 body {
   margin: 0 auto;
   overflow: hidden;
-  position: relative;
 }
 .home{
   width: 100vw;
   height: 100vh;
   background: radial-gradient(circle, rgba(68,53,91,1) 0%, rgba(49,38,62,1) 100%);
+  position: relative;
 }
 #header{
 font-size: 5em;
